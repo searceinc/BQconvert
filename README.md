@@ -164,13 +164,13 @@ Convert all tables in public schema and print it on screen
 
 ```bash
 python3 bqconverter.py \
--h redshift.endpoint.aws.amazon.com \
--u awsuser \
--p postgres \
--P 6553 \
--d bhuvi \
--S redshift  \
--a no 
+	-h redshift.endpoint.aws.amazon.com \
+	-u awsuser \
+	-p postgres \
+	-P 6553 \
+	-d bhuvi \
+	-S redshift  \
+	-a no 
 ```
 
 Convert all tables from `schema1` except`tbl1,tbl2` then save the converted schema into a file.
