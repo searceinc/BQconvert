@@ -11,7 +11,7 @@ from func_write_outfile import write_outfile
 from func_create_bqdataset import create_bqdataset
 
 # argparse variables
-parser = argparse.ArgumentParser(add_help=False,description='BigQuery Schema Convertor:- Convert any database schema to BigQuery Tables. Supported Databases: AWS RedShift.''')
+parser = argparse.ArgumentParser(add_help=False,description='BQconvertor:- Convert any database schema to BigQuery Tables. Supported Databases: AWS RedShift.''')
 
 parser.add_argument('-h', '--host', dest='db_host', action='store', required=True, help="Database server IP/Endpoint")
 parser.add_argument('-u', '--user', dest='db_user', action='store', required=True, help="Database username")
