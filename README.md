@@ -70,8 +70,8 @@ Supported Databases: AWS RedShift.
 ## Flag Options:
 
 #### -h, --host
-
-|-------------|-----------------| 
+| <!-- -->    | <!-- -->        |
+|-------------|-----------------|
 | Description | Database server | 
 | Data Type   | string          | 
 | Mandatory   | YES             | 
