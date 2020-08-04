@@ -175,45 +175,45 @@ python3 bqconverter.py \
 
 Convert all tables from `schema1` except`tbl1,tbl2` then save the converted schema into a file.
 
-```bash
+```sh
 python3 bqconverter.py \
--h redshift.endpoint.aws.amazon.com \
--u awsuser \
--p postgres \
--P 6553 \
--d bhuvi \
--S redshift  \
--s schema1 \
--b tbl1,tbl2 \
--o /opt/bqddl.sql
+	-h redshift.endpoint.aws.amazon.com \
+	-u awsuser \
+	-p postgres \
+	-P 6553 \
+	-d bhuvi \
+	-S redshift  \
+	-s schema1 \
+	-b tbl1,tbl2 \
+	-o /opt/bqddl.sql
 ```
 
 Convert using a custom mapping file
 
-```bash
+```sh
 python3 bqconverter.py \
--h redshift.endpoint.aws.amazon.com \
--u awsuser \
--p postgres \
--P 6553 \
--d bhuvi \
--S redshift  \
--a no \
--m /tmp/pg-to-bq.json
+	-h redshift.endpoint.aws.amazon.com \
+	-u awsuser \
+	-p postgres \
+	-P 6553 \
+	-d bhuvi \
+	-S redshift  \
+	-a no \
+	-m /tmp/pg-to-bq.json
 ```
 
 Convert all schema except `schemax` then apply this to BQ and create the dataset `mybq-dataset` before applying.
 
-```bash
+```sh
 python3 bqconverter.py \
--h redshift.endpoint.aws.amazon.com \
--u awsuser \
--p postgres \
--P 6553 \
--d bhuvi \
--S redshift  \
--b schemax \
--a yes \
--c yes \
--D mybq-dataset
+	-h redshift.endpoint.aws.amazon.com \
+	-u awsuser \
+	-p postgres \
+	-P 6553 \
+	-d bhuvi \
+	-S redshift  \
+	-b schemax \
+	-a yes \
+	-c yes \
+	-D mybq-dataset
 ```
