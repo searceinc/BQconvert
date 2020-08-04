@@ -70,12 +70,12 @@ Supported Databases: AWS RedShift.
 ## Flag Options:
 
 #### -h, --host
- 
+
+|             |                 | 
+|-------------|-----------------| 
 | Description | Database server | 
 | Data Type   | string          | 
 | Mandatory   | YES             | 
-
-
 
 Databsase server's IP address or RDS, RedShift's endpoint to connect. The public/private IP address of the server or computer needs to be whitelisted to access the database.
 
