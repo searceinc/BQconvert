@@ -71,7 +71,6 @@ Supported Databases: AWS RedShift.
 
 #### -h, --host
 
-|             |                 | 
 |-------------|-----------------| 
 | Description | Database server | 
 | Data Type   | string          | 
