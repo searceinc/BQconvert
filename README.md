@@ -79,7 +79,7 @@ Supported Databases: AWS RedShift.
 Databsase server's IP address or RDS, RedShift's endpoint to connect. The public/private IP address of the server or computer needs to be whitelisted to access the database.
 
 #### -u, --user
-
+|||
 |-------------|---------------|
 | Description | Database user | 
 | Data Type   | string        | 
@@ -89,7 +89,7 @@ Databsase server's IP address or RDS, RedShift's endpoint to connect. The public
 Database user name. Generally `Read Only` access on all the tables that needs to be converted. 
 
 #### -p, --password
-
+|||
 |-------------|-------------------|
 | Description | Database password | 
 | Data Type   | string            | 
@@ -99,7 +99,7 @@ Database user name. Generally `Read Only` access on all the tables that needs to
 Database user's password. If your password has any special characters then use it inside a single quote. (`example: 'my@com%4pas'`)
 
 #### -P, --port
-
+|||
 |-------------|---------------|
 | Description | Database port | 
 | Data Type   | integer       | 
@@ -109,7 +109,7 @@ Database user's password. If your password has any special characters then use i
 Database Server's port number. Not all the database servers are using the default port. So its mandatory parameter.
 
 #### -d, --database
-
+|||
 |-------------|---------------|
 | Description | Database name | 
 | Data Type   | string        | 
@@ -118,7 +118,7 @@ Database Server's port number. Not all the database servers are using the defaul
 Database name to connect and extract the schema, Some databases won't support the cross database access. So use the database name that you want to convert.
 
 #### -s, --sh_whitlist
-
+|||
 |-------------|-------------------------------------|
 | Description | Whitelisted schema                  | 
 | Data Type   | string or quoted string             | 
@@ -131,7 +131,7 @@ Whitelist the list of schema names for the conversion. You can use a single sche
 (`example: schema1,schema2` or `'schema1,schema#3'`)
 
 #### -b, --blocklist
-
+|||
 |-------------|-------------------------|
 | Description | Blocklisted schemas     | 
 | Data Type   | string or quoted string | 
@@ -141,7 +141,7 @@ Whitelist the list of schema names for the conversion. You can use a single sche
 List of schema that needs to skipped from the conversion. Any tables from this schema will be skipped. It is an optional argument.
 
 #### -t, --tbl_whitelist
-
+|||
 |-------------|-------------------------|
 | Description | Whitelisted tables      | 
 | Data Type   | string or quoted string | 
@@ -150,7 +150,7 @@ List of schema that needs to skipped from the conversion. Any tables from this s
 List of tables that needs to be migrated from the `sh_whitelist` schema. All the tables in the whitelisted schema will be converted. This is optional argument.
 
 #### -w, --tbl_blocklist
-
+|||
 |-------------|-------------------------|
 | Description | Blocklisted tables      | 
 | Data Type   | string or quoted string | 
@@ -159,7 +159,7 @@ List of tables that needs to be migrated from the `sh_whitelist` schema. All the
 List of tables needs to be skipped from the conversion from the whitelisted schema or all the schema. This is optional argument.
 
 #### -S, --source
-
+|||
 |-------------------|------------------------|
 | Description       | Source Database server | 
 | Data Type         | string                 | 
@@ -169,7 +169,7 @@ List of tables needs to be skipped from the conversion from the whitelisted sche
 Mention the database source like `redshift or sqlserver` Right now we support only for **AWS RedShift**. So pick the source from the available options. 
 
 #### -r, --bq_project
-
+|||
 |-------------|-----------------------------------|
 | Description | BQ project name                   | 
 | Data Type   | string                            | 
@@ -178,7 +178,7 @@ Mention the database source like `redshift or sqlserver` Right now we support on
 Name of your GCP project where you want to apply the converted schema. Make sure you have a service account key file from this project with BigQuery admin access.
 
 #### -l, --bq_location
-
+|||
 |-------------|-----------------------------------|
 | Description | BQ dataset location               | 
 | Data Type   | string                            | 
@@ -187,7 +187,7 @@ Name of your GCP project where you want to apply the converted schema. Make sure
 Location of your BigQuery dataset. This option is only useful if you are going to create a new dataset from this tool.
 
 #### -D, --bq_dataset
-
+|||
 |-------------|---------------------------------------------|
 | Description | BQ dataset name                             | 
 | Data Type   | string                                      | 
@@ -196,7 +196,7 @@ Location of your BigQuery dataset. This option is only useful if you are going t
 Name of your BigQuery dataset that needs to be created or already available on GCP to create the converted table's schema. 
 
 #### -c, --create
-
+|||
 |-------------------|---------------------------------------------|
 | Description       | Create BQ dataset                           | 
 | Data Type         | string                                      | 
@@ -206,7 +206,7 @@ Name of your BigQuery dataset that needs to be created or already available on G
 If you want to create a new dataset to apply the converted table's DDL then use this option. By default it is set to no. 
 
 #### -x, --drop
-
+|||
 |-------------------|-----------------------|
 | Description       | Drop the tables on BQ | 
 | Data Type         | string                | 
@@ -216,7 +216,7 @@ If you want to create a new dataset to apply the converted table's DDL then use 
 If you want to add the drop table statement on the DDL file and drop the tables if they are already available on your BigQuery dataset before create the converted tables then use this option.
 
 #### -a, --apply
-
+|||
 |-------------------|---------------------|
 | Description       | Create tables on BQ | 
 | Data Type         | string              | 
@@ -226,7 +226,7 @@ If you want to add the drop table statement on the DDL file and drop the tables 
 Once the conversion done and you want to create the converted schema on your BigQuery tables then you need use this argument. 
 
 #### -m, --mapping
-
+|||
 |-------------|--------------------------|
 | Description | custom mapping file path | 
 | Data Type   | string or quoted string  | 
@@ -242,7 +242,7 @@ We are using a predefined data type mapping for the source databases as per the 
 ```
 
 #### -o, --outfile
-
+|||
 |-------------|----------------------------------|
 | Description | Save the converted DDL into File | 
 | Data Type   | string or quoted string          | 
@@ -251,7 +251,7 @@ We are using a predefined data type mapping for the source databases as per the 
 If you want to save the converted schema into a SQL file without creating them on BQ then you have to use this option and give the output file path. If you are not applying the converted schema on BQ and not pushing it to the outfile then it'll print on the screen where you are running this tool.
 
 #### -H, --help
-
+|||
 |-------------|--------------------------|
 | Description | list available arguments | 
 | Mandatory   | NO                       |
