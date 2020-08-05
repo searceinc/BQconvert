@@ -34,7 +34,7 @@ You can either directly create the tables on BigQuery from this tool, or save th
 ```bash
 git clone https://github.com/searceinc/BQconverter.git
 cd BQconverter
-pip3 install -r requirement.txt
+pip3 install -r requirements.txt
 ```
 
 ### Export Google Service account key:
