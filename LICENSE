@@ -2,6 +2,21 @@
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
+Copyright for portions of `Contributor Covenant Code of Conduct` page is 
+held by Brent Ozar under the MIT license: 
+https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/blob/dev/LICENSE.md 
+
+Copyright for portions of SQLparse held by andialbrecht as part of project sqlparse 
+and are provided under the BSD 3 License: 
+https://github.com/andialbrecht/sqlparse/blob/master/LICENSE
+
+Copyright for portions of DDLparse held by shinichi-takii as part of project sqlparse 
+and are provided under the BSD 3 License: 
+https://github.com/shinichi-takii/ddlparse/blob/master/LICENSE.md
+
+All other copyrights for BQconvertor are held by SearceInc, 2020 as described below.
+
+
    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
    1. Definitions.
