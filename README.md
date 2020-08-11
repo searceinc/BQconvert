@@ -17,7 +17,7 @@ This BigQuery Schema Conversion tool will convert the source database schema to 
 1. Query the `information_schema` and get the tables, columns details. Then it'll generate the BigQurey DDL.
 2. Parsing the dump file. We can use `pg_dump`,`mysqldump` to backup the database schema. 
 	* If you are using RedShift you can use `pg_dump`, generate_table_ddl` view from RedShift utilities or you can have your own SQL file with all the table's DDL. 
-	* BigQuery Schema conversion tool internally using sqlparser and DDLparser libraries to parse the SQL file and then extract the table and column information. 
+	* BigQuery Schema conversion tool internally using [`sqlparse`](https://github.com/andialbrecht/sqlparse) and [`ddlparse`](https://github.com/shinichi-takii/ddlparse/) libraries to parse the SQL file and then extract the table and column information. 
 
 ## Supported Databases (Sources)
 
