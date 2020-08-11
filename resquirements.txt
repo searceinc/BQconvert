@@ -1,2 +1,4 @@
 google-cloud-bigquery
 psycopg2-binary
+sqlparse
+ddlparse

@@ -7,9 +7,11 @@
 	"double precision": "FLOAT64",
 	"boolean": "BOOL",
 	"character": "STRING",
+	"char": "STRING",
+	"varchar": "STRING",
 	"character varying": "STRING",
 	"date": "DATE",
 	"timestamp without time zone": "DATETIME",
 	"timestamp with time zone": "TIMESTAMP",
-	"geometry": "GEOMETRY"
+	"geometry": "GEOGRAPHY"
 }
