@@ -66,14 +66,15 @@ Invoke the `bqconverter.py` file and pass all the mandatory parameters.
 ```bash
 python3 bqconverter.py --help
 
-usage: bqconverter.py -h DB_HOST -u DB_USER -p DB_PASSWORD -P DB_PORT -d DB_NAME
-              [-s SH_WHITLIST] [-b SH_BLOCKLIST] [-t TBL_WHITELIST]
-              [-w TBL_BLOCKLIST] -S {redshift} -r BQ_PROJECT -l BQ_LOCATION -D
-              BQ_DATASET [-c {yes,no}] [-x {yes,no}] [-a {yes,no}]
-              [-m MAPPING] [-o OUTFILE] [-H]
+usage: bqconverter.py [-h DB_HOST] [-u DB_USER] [-p DB_PASSWORD] [-P DB_PORT]
+                      [-d DB_NAME] [-s SH_WHITELIST] [-b SH_BLOCKLIST]
+                      [-t TBL_WHITELIST] [-w TBL_BLOCKLIST] -S {redshift} -r
+                      BQ_PROJECT [-l BQ_LOCATION] -D BQ_DATASET [-c {yes,no}]
+                      [-x {yes,no}] [-a {yes,no}] [-m MAPPING] [-i INFILE]
+                      [-o OUTFILE] [-H]
 
-BigQuery Schema Convertor:- Convert any database schema to BigQuery Tables.
-Supported Databases: AWS RedShift.
+BQconvertor:- Convert any database schema to BigQuery Tables. Supported
+Databases: AWS RedShift.
 ```
 
 ## Flag Options:
@@ -158,6 +159,9 @@ We are using a predefined data type mapping for the source databases as per the 
 	"other_source_type":"another_target_type"
 }
 ```
+#### ```-i, --infile```
+
+If you the table DDL in a SQL file or a SQL dump, then we can parse that SQL file and convert the schema. Use this flag and give the file path to parse.
 
 #### ```-o, --outfile```
 
@@ -224,5 +228,17 @@ python3 bqconverter.py \
 	-b schemax \
 	-a yes \
 	-c yes \
+	-D mybq-dataset
+```
+
+Convert t1 and t2 tables from public schema from the SQL dump file then apply it to BigQuery.
+
+```sh
+python3 bqconverter.py \
+	-i /tmp/rs_schema_dump.sql \
+	-S redshift  \
+	-s public \
+	-t t1,t2 \
+	-a yes \
 	-D mybq-dataset
 ```
