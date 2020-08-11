@@ -226,6 +226,8 @@ python3 bqconverter.py \
 	-d bhuvi \
 	-S redshift  \
 	-b schemax \
+	-r mygcp-project \
+	-l US \
 	-a yes \
 	-c yes \
 	-D mybq-dataset
@@ -237,6 +239,8 @@ Convert t1 and t2 tables from public schema from the SQL dump file then apply it
 python3 bqconverter.py \
 	-i /tmp/rs_schema_dump.sql \
 	-S redshift  \
+	-r mygcp-project \
+	-l US \
 	-s public \
 	-t t1,t2 \
 	-a yes \
