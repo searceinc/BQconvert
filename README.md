@@ -1,5 +1,7 @@
 # BigQuery Schema Convertor
 
+![](cover.jpg)
+
 BigQuery Schema Convertor is a Python based tool that will help you to convert your existing database schema to BigQuery compatible schema and automatically creates the converted tables on the BigQuery dataset. Right now this tool supports only AWS RedShift as the source schema database, but soon we'll add other databases to this convertor. 
 
 ## Background:
