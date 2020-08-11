@@ -242,3 +242,8 @@ python3 bqconverter.py \
 	-a yes \
 	-D mybq-dataset
 ```
+
+## Limitations:
+
+* BigQuery will not support table names and column names with whitespace. So if you have such table or column, then while applying this to BQ, it'll crash.
+* Convert from a dump file needs to load the dump file into memory, so we highly recommend to take a schema level dump instead of full database dump with data.
