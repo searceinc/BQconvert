@@ -21,9 +21,9 @@ parser.add_argument('-p', '--password', dest='db_password', action='store', requ
 parser.add_argument('-P', '--port', dest='db_port', action='store', required=False, help="Database Port")
 parser.add_argument('-d', '--database', dest='db_name', action='store', required=False, help="Database name")
 parser.add_argument('-s', '--sh_whitelist', dest='sh_whitelist', action='store', required=False, help="List of schemas to be migrated")
-parser.add_argument('-b', '--sh_blocklist', dest='sh_blocklist', action='store', required=False, help="Exclude the list schema will not be migrated")
+parser.add_argument('-b', '--sh_blacklist', dest='sh_blacklist', action='store', required=False, help="Exclude the list schema will not be migrated")
 parser.add_argument('-t', '--tbl_whitelist', dest='tbl_whitelist', action='store', required=False, help="List of tables to be migrated")
-parser.add_argument('-w', '--tbl_blocklist', dest='tbl_blocklist', action='store', required=False, help="Exclude the list tables will not be migrated")
+parser.add_argument('-w', '--tbl_blacklist', dest='tbl_blacklist', action='store', required=False, help="Exclude the list tables will not be migrated")
 parser.add_argument('-S', '--source', dest='source', action='store', required=True, type = str.lower, choices=['redshift'], help="Source platform (eg:redshift, sqlserver)")
 parser.add_argument('-r', '--bq_project', dest='bq_project', action='store', required=True,help="Bigquery project name")
 parser.add_argument('-l', '--bq_location', dest='bq_location', action='store', help="Bigquery dataset location")
@@ -102,22 +102,22 @@ def redshift_file_conversion(input):
         sh_whitelist = schema_name
     else:
         sh_whitelist = str(args.sh_whitelist).split(',')
-    if str(args.sh_blocklist) == 'None':
-        sh_blocklist = []
+    if str(args.sh_blacklist) == 'None':
+        sh_blacklist = []
     else:
-        sh_blocklist = str(args.sh_blocklist).split(',')
-    sh_whitelist = [x for x in sh_whitelist if not x in sh_blocklist]
+        sh_blacklist = str(args.sh_blacklist).split(',')
+    sh_whitelist = [x for x in sh_whitelist if not x in sh_blacklist]
     # print(sh_whitelist)  
 
     if str(args.tbl_whitelist) == 'None':
         tbl_whitelist = table_name
     else:
         tbl_whitelist = str(args.tbl_whitelist).split(',')
-    if str(args.tbl_blocklist) == 'None':
-        tbl_blocklist = []
+    if str(args.tbl_blacklist) == 'None':
+        tbl_blacklist = []
     else:
-        tbl_blocklist = str(args.tbl_blocklist).split(',')
-    tbl_whitelist = [x for x in tbl_whitelist if not x in tbl_blocklist]
+        tbl_blacklist = str(args.tbl_blacklist).split(',')
+    tbl_whitelist = [x for x in tbl_whitelist if not x in tbl_blacklist]
     # print(tbl_whitelist)  
 
     data_mapping = get_datatype_mapping(args.mapping,args.source)
@@ -197,7 +197,7 @@ def redshift_file_conversion(input):
 # Get the RedShift data type and Map it with BigQuery
 def redshift_conversion():
     data_mapping = get_datatype_mapping(args.mapping,args.source)
-    finalized_schema_table_names= get_tablenames(dbcursor,args.sh_whitelist,args.sh_blocklist,args.tbl_whitelist,args.tbl_blocklist,source_platform)
+    finalized_schema_table_names= get_tablenames(dbcursor,args.sh_whitelist,args.sh_blacklist,args.tbl_whitelist,args.tbl_blacklist,source_platform)
     # Extract values from the get_table_col_list function
     table_names = finalized_schema_table_names[1]
     schema_name_in = "'"+"','".join(finalized_schema_table_names[0])+"'"

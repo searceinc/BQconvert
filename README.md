@@ -70,8 +70,8 @@ Invoke the `bqconverter.py` file and pass all the mandatory parameters.
 python3 bqconverter.py --help
 
 usage: bqconverter.py [-h DB_HOST] [-u DB_USER] [-p DB_PASSWORD] [-P DB_PORT]
-                      [-d DB_NAME] [-s SH_WHITELIST] [-b SH_BLOCKLIST]
-                      [-t TBL_WHITELIST] [-w TBL_BLOCKLIST] -S {redshift} -r
+                      [-d DB_NAME] [-s SH_WHITELIST] [-b SH_BLACKLIST]
+                      [-t TBL_WHITELIST] [-w TBL_BLACKLIST] -S {redshift} -r
                       BQ_PROJECT [-l BQ_LOCATION] -D BQ_DATASET [-c {yes,no}]
                       [-x {yes,no}] [-a {yes,no}] [-m MAPPING] [-i INFILE]
                       [-o OUTFILE] [-H]
@@ -108,7 +108,7 @@ Whitelist the list of schema names for the conversion. You can use a single sche
 
 (`example: schema1,schema2` or `'schema1,schema#3'`)
 
-#### ```-b, --blocklist```
+#### ```-b, --sh_blacklist```
 
 List of schema that needs to skipped from the conversion. Any tables from this schema will be skipped. It is an optional argument.
 
@@ -116,7 +116,7 @@ List of schema that needs to skipped from the conversion. Any tables from this s
 
 List of tables that needs to be migrated from the `sh_whitelist` schema. All the tables in the whitelisted schema will be converted. This is optional argument.
 
-#### ```-w, --tbl_blocklist```
+#### ```-w, --tbl_blacklist```
 
 List of tables needs to be skipped from the conversion from the whitelisted schema or all the schema. This is optional argument.
 
