@@ -254,3 +254,9 @@ python3 bqconverter.py \
 
 * BigQuery will not support table names and column names with whitespace. So if you have such table or column, then while applying this to BQ, it'll crash.
 * Convert from a dump file needs to load the dump file into memory, so we highly recommend to take a schema level dump instead of full database dump with data.
+* Only tables can be converted.
+
+## Contributions:
+
+* [Read how to contribute](https://github.com/searceinc/BQconvert/blob/master/CONTRIBUTING.md)
+* [Its under Apache 2.0 license](https://github.com/searceinc/BQconvert/LICENSE)
