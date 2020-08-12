@@ -8,7 +8,7 @@
 
 ## How to Report Bugs
 
-If you find any issues/bug in this, we encorge your to report to us. But before reporting the bug, please go through the [issues](https://github.com/searceinc/BQconvertor/issues) section. Someone might have already reported that issue. You can refer the [closed issues](https://github.com/searceinc/BQconvertor/issues?q=is%3Aissue+is%3Aclosed) section as well.
+If you find any issues/bug in this, we encorge your to report to us. But before reporting the bug, please go through the [issues](https://github.com/searceinc/BQconvert/issues) section. Someone might have already reported that issue. You can refer the [closed issues](https://github.com/searceinc/BQconvert/issues?q=is%3Aissue+is%3Aclosed) section as well.
 
 If nothing is reported before, then please create a new issue and include as much details as you can - what you're seeing now, and what you'd expect to see instead.
 
@@ -94,7 +94,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-[bhuvaneshwaran.r@searce.com].
+[bhuvaneshwaran.r@searce.com] and [ranjith.kuppala@searce.com].
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
