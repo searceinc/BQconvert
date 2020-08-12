@@ -1,4 +1,4 @@
-# Contributing to RStoolKit
+# Contributing to BQConvert
 
 First of all, welcome! We're excited that you'd like to contribute. How would you like to help?
 
