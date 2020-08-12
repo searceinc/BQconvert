@@ -102,7 +102,7 @@ Database Server's port number. Not all the database servers are using the defaul
 
 Database name to connect and extract the schema, Some databases won't support the cross database access. So use the database name that you want to convert.
 
-#### ```-s, --sh_whitlist```
+#### ```-s, --sh_whitelist```
 
 Whitelist the list of schema names for the conversion. You can use a single schema or multiple schema. If your schema name contains any special character, then use it in single quotes. 
 
