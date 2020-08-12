@@ -2,7 +2,7 @@
 
 ![](cover.jpg)
 
-BigQuery Schema converter is a Python based tool that will help you to convert your existing database schema to BigQuery compatible schema and automatically creates the converted tables on the BigQuery dataset. Right now this tool supports only AWS RedShift as the source schema database, but soon we'll add other databases to this converter. 
+BQconverter is a Python based tool that helps convert your existing database schema to BigQuery compatible schema and automatically create the converted tables on the BigQuery dataset. It currently supports AWS RedShift as the source database. Adding support for other widely used databases is progress. 
 
 ## Background:
 
