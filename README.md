@@ -1,14 +1,14 @@
-# BigQuery Schema Convertor
+# BigQuery Schema Converter
 
 ![](cover.jpg)
 
-BigQuery Schema Convertor is a Python based tool that will help you to convert your existing database schema to BigQuery compatible schema and automatically creates the converted tables on the BigQuery dataset. Right now this tool supports only AWS RedShift as the source schema database, but soon we'll add other databases to this convertor. 
+BigQuery Schema converter is a Python based tool that will help you to convert your existing database schema to BigQuery compatible schema and automatically creates the converted tables on the BigQuery dataset. Right now this tool supports only AWS RedShift as the source schema database, but soon we'll add other databases to this converter. 
 
 ## Background:
 
 Due to BigQuery's serverless, high performance and BigQuery ML kinds of features attract a lot of companies to migrate their current data warehouse solution to BigQuery. While migrating such data warehouses to BigQuery, we may use `bqload` and `autodetect schema` features to load the data and create the table. But this autodetect will scan 100 lines and finalize the schema. There is no guarantee that all the data types are properly selected. 
 
-This BigQuery Schema Convertor tool will help you to scan your current database/data warehouse and extract the schema from it. Then for each database there is mapping file which map the source data type with the target data type. Then it'll create the DDL. 
+This BigQuery Schema converter tool will help you to scan your current database/data warehouse and extract the schema from it. Then for each database there is mapping file which map the source data type with the target data type. Then it'll create the DDL. 
 
 You can either directly create the tables on BigQuery from this tool, or save the converted DDL into a file. So you can review the file, then import the DDL file via BQ console of bqcli.
 
@@ -75,7 +75,7 @@ usage: bqconverter.py [-h DB_HOST] [-u DB_USER] [-p DB_PASSWORD] [-P DB_PORT]
                       [-x {yes,no}] [-a {yes,no}] [-m MAPPING] [-i INFILE]
                       [-o OUTFILE] [-H]
 
-BQconvertor:- Convert any database schema to BigQuery Tables. Supported
+BQconverter:- Convert any database schema to BigQuery Tables. Supported
 Databases: AWS RedShift.
 ```
 
