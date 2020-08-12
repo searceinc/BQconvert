@@ -43,8 +43,9 @@ This BigQuery Schema Conversion tool will convert the source database schema to 
 - **BigQuery Admin Service account:** A JSON credential file
 
 ```bash
-git clone https://github.com/searceinc/BQconverter.git
-cd BQconverter
+wget https://github.com/searceinc/BQconvert/blob/master/bqconvert-latest.zip
+unzip bqconvert-latest.zip
+cd bqconvert
 pip3 install -r requirements.txt
 ```
 
