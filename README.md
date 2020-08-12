@@ -154,7 +154,7 @@ Once the conversion done and you want to create the converted schema on your Big
 
 #### ```-m, --mapping```
 
-We are using a predefined data type mapping for the source databases as per the most comfortable type on BigQuery. If you want to use your own data type mapping then use this argument to mention the path for the mapping file. Its basically a JSON file and looks like the below format.
+We are using a predefined data type mapping for the source databases as per the most comfortable type on BigQuery. If you want to use your own data type mapping then use this argument to mention the path for the mapping file. Its basically a JSON file and looks like the below format. Take a look at [here](https://github.com/searceinc/BQconvert/blob/master/setup/datatype-mapping/redshift.json)
 
 ```json
 {
@@ -204,7 +204,7 @@ python3 bqconverter.py \
 	-o /opt/bqddl.sql
 ```
 
-Convert using a custom mapping file
+Convert using a custom mapping file. Take a look at [here](https://github.com/searceinc/BQconvert/blob/master/setup/datatype-mapping/redshift.json)
 
 ```sh
 python3 bqconverter.py \
