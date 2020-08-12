@@ -8,4 +8,4 @@ If you bored to read the full document, no worrires. Just follow the five points
 * Please first have a discussion with the manitainers by creating an issue.
 * The maintainers may not have the enough repsource to review all of your issues/comments/pull requests. Please undestand and wait for sometime.
 * Please make sure your new pull request will not break anything.
-* All the contributions are must be licensed under the [MIT license](https://github.com/searceinc/BQconverter/blob/master/LICENSE)
+* All the contributions are must be licensed under the [Apache2.0 license](https://github.com/searceinc/BQconvert/LICENSE)
