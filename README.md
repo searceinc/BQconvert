@@ -45,7 +45,7 @@ This BQconvert tool will convert the source database schema to BigQuery in two d
 ```bash
 wget https://github.com/searceinc/BQconvert/blob/master/bqconvert-latest.zip
 unzip bqconvert-latest.zip
-cd bqconvert
+cd bqconvert/setup
 pip3 install -r requirements.txt
 ```
 
